@@ -30,7 +30,8 @@
                             ข้อมูลเพิ่มเติม
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">สมัครสมาชิก</a></li>
+                            <li><a class="dropdown-item" href="#" class="nav-link" data-bs-toggle="modal"
+                                    data-bs-target="#SigninModal">สมัครสมาชิก</a></li>
                             <li class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item" href="#">หน้าหลัก</a></li>
@@ -49,7 +50,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">
+                        <a href="" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">
                             เข้าสู่ระบบ
                         </a>
                     </li>
@@ -131,7 +132,164 @@
             </li>
         </ul>
     </div>
-    <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container"></div>
+
+                    <!-- form -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter your username">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Login</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancle</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Modal sign up -->
+<div class="modal fade" id="SigninModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="exampleModalLabel">Sign up</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <div class="form-floating mb-3">
+  <form class="row g-3">
+  <div class="col-md-6 form-label fw-bold text-success">
+    <label for="inputEmail4" class="form-label">Fist name</label>
+    <input type="email" class="form-control" id="inputEmail4" placeholder="enter your Fist name">
+  </div>
+  <div class="col-md-6 form-label fw-bold text-success">
+    <label for="inputPassword4" class="form-label">Last name</label> 
+    <input type="email" class="form-control" id="inputEmail4" placeholder="enter your Last name">
+  </div>
+  <div class="col-12 form-label fw-bold text-success">
+    <label for="inputAddress" class="form-label">Email</label>
+     <input type="email" class="form-control" id="inputEmail4" placeholder="enter your Email">
+  </div>
+  <div class="col-md-6 form-label fw-bold text-success">
+    <label for="inputEmail4" class="form-label">Password</label>
+    <input type="Password" class="form-control" id="inputPassword4" placeholder="Password">
+  </div>
+  <div class="col-md-6 form-label fw-bold text-success">
+    <label for="inputEmail4" class="form-label">Confirm Password</label>
+    <input type="Password" class="form-control" id="inputPassword4" placeholder="enter your Password again">
+  </div>
+ 
+    <form>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label class="form-label fw-bold text-success">Gender:</label><br>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+            <label class="form-check-label" for="male">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+            <label class="form-check-label" for="female">Female</label>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label fw-bold text-success">Hobbies:</label><br>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" value="Music" id="music">
+            <label class="form-check-label" for="music">Music</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" value="Sports" id="sports">
+            <label class="form-check-label" for="sports">Sports</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" value="Travel" id="travel">
+            <label class="form-check-label" for="travel">Travel</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" value="Movies" id="movies">
+            <label class="form-check-label" for="movies">Movies</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label class="form-label fw-bold text-success">Source of Income</label>
+          <select class="form-select">
+            <option selected>Employed</option>
+            <option>Self-employed</option>
+            <option>Student</option>
+            <option>Other</option>
+          </select>
+        </div>
+          <label class="form-label fw-bold text-success">Income</label>
+          <div class="d-flex align-items-center">
+            <input type="range" class="form-range" min="0" max="50000" value="20000" id="incomeRange" oninput="updateIncome(this.value)">
+            <span class="slider-value" id="incomeValue">20K</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label class="form-label fw-bold text-success">Upload Profile Picture</label>
+          <input class="form-control" type="file">
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label fw-bold text-success">Age</label>
+          <input class="form-control" type="number" value="18">
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label fw-bold text-success">Bio</label>
+        <textarea class="form-control" rows="4"></textarea>
+      </div>
+
+      <div class="text-end">
+        <button type="submit" class="btn btn-success px-4">Create</button>
+      </div>
+    </form>
+  </div>
+</div>
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </div>
+</form>
+<script>
+  function updateIncome(val) {
+    document.getElementById("incomeValue").textContent = Math.round(val / 1000) + "K";
+  }
+</script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+            <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+            <script src="js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
